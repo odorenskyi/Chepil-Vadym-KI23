@@ -34,6 +34,9 @@
 				</Linker>
 			</Target>
 		</Build>
+		<Unit filename="../ModulesChepil.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="main.cpp">
 			<Option compilerVar="CC" />
 		</Unit>
