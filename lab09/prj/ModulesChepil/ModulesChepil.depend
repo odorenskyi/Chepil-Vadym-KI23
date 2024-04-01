@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1711999850 source:d:\Університет\1 Курс\2 Семестр\Лабораторні з БМТП\chepil-vadym-ki23\lab09\prj\moduleschepil\main.cpp
+	<iostream>
+	<cmath>
+	<iomanip>
+
