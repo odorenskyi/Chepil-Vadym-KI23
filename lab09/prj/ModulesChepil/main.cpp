@@ -18,26 +18,31 @@ void discount_calculation(float score)
 {
     system("chcp 65001 > nul");
     float expense;
-    if(score < 1000){
-        expense = score * 0.01;
+    if(score > 0){
+        if(score < 1000){
+            expense = score * 0.01;
+        }
+        if(score >= 1000 && score < 2000){
+            expense = score * 0.05;
+        }
+        if(score >= 2000 && score < 3000){
+            expense = score * 0.07;
+        }
+        if(score >= 3000 && score < 5000){
+            expense = score * 0.1;
+        }
+        if(score >= 5000 && score < 10000){
+            expense = score * 0.15;
+        }
+        if(score >= 10000){
+            expense = score * 0.2;
+        }
+        score -= expense;
+        cout << "Сума до сплати: " << setprecision(2) << fixed << score << endl;
     }
-    if(score >= 1000 && score < 2000){
-        expense = score * 0.05;
+    else{
+        cout << "Введені не відповідні дані" << endl;
     }
-    if(score >= 1000 && score < 2000){
-        expense = score * 0.05;
-    }
-    if(score >= 3000 && score < 5000){
-        expense = score * 0.1;
-    }
-    if(score >= 5000 && score < 10000){
-        expense = score * 0.15;
-    }
-    if(score >= 10000){
-        expense = score * 0.2;
-    }
-    score -= expense;
-    cout << "Сума до сплати: " << setprecision(2) << fixed << score;
 }
 void matching_sizes(short int underwear_size)
 {
