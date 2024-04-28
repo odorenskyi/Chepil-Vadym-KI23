@@ -10,6 +10,7 @@
 
 void getAccount(Employee account, int index);
 void deleteFromDataBase(vector<Employee> &database, int ID);
+void searchAccount(vector<Employee> &database, string surname);
 
 
 #endif // CHEPIL_H_H_INCLUDED

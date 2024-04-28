@@ -109,3 +109,24 @@ void deleteFromDataBase(vector<Employee> &database, int ID){
     cout << setw(20) << "" << "+           Çàïèñ íå çíàéäåíî           +" << endl;
     cout << setw(20) << "" << "+++++++++++++++++++++++++++++++++++++++++" << endl << endl;
 }
+
+void searchAccount(vector<Employee> &database, string surname) {
+    string lastName;
+    vector<int> result;
+    cout << "+" << setfill('—') << setw(79) << "+" << endl << setfill(' ')
+         << "|" << setw(45) << "ÊÀÐÒÊÈ Ç ÏÐ²ÇÂÈÙÅÌ " << setw(33) << left << surname << resetiosflags(ios::left) << "|" << endl
+         << "+" << setfill('—') << setw(79) << "+" << endl << setfill(' ');
+    for(int i = 0; i < database.size(); i++){
+        istringstream(database[i].fullName) >> lastName;
+        if(lastName == surname){
+            result.push_back(i);
+        }
+    }
+    for(int i = 0; i < result.size(); i++){
+        getAccount(database[result[i]], result[i]);
+        if(i+1 == result.size())
+            cout << "+" << setfill('—') << setw(79) << "+" << endl << setfill(' ');
+        else
+            cout << "+" << setfill('—') << setw(7) << "+" << setw(26) << "+" << setw(46) << "+" << setfill(' ') << endl;
+    }
+}
