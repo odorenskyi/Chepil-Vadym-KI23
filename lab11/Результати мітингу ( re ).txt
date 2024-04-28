@@ -1,0 +1,117 @@
+Аналіз задач IT-проєкту та вимоги до ПЗ
+
+Вимоги: 
+1. Кожен модуль має містити try-throw-catch блоки.
+2. Мова користувача - українська.
+3. Робота с файлами лише у бінарному вигляді.
+4. БД автоматично завантажується при запуску й автоматично зберігається при вимкнені ПЗ.
+5. Структура (Employee) має бути описана у окремому .h файлі.
+
+//
+
+Аналіз та розподіл задач
+
+1. Виведення всієї бази на екран або у текстовий файл ( на вибір користувача ).
+	Функція void getDataBase(vector<Employee> &database) - виводить усі обілкові записи з database 
+циклом.
+
+Відповідальний за реалізацію - Карпець Олександр.
+
+2. Додавання нового запису до бази даних.
+	Функція void addToDataBase(vector<Employee> &database) - записує у database новий обліковий запис,
+корий створюється за допомогою функцій інттерфейсів.
+
+Відповідальний за реалізацію - Яровець Тарас.
+
+3. Пошук запису за введеним прізвищем працівника.
+	Функція void getFromDataBase(vector<Employee> &database, string surname) приймає database та шукає 
+обліковий запис з пенвим ім'ям циклом та записує у буфер, після йде перебор  буфера циклом.
+
+Відповідальний за реалізацію - Чепіль Вадим.
+
+4. Вилучення заданого оператором запису з бази даних.
+	Функція void deleteFromDataBase(vector<Employee> &database, int ID) приймає database та ID обліковго
+запису, котрий тереба видалити, шукає його за ID циклом та видаляє.
+
+Відповідальний за реалізацію - Чепіль Вадим.
+
+5. Завершення роботи програми з автоматичним записом БД у файл.
+Функція void saveDataBase(vector<Employee> &database, string filename) циклом робить перебор та запис у файл.
+
+Відповідальний за реалізацію - Яровець Тарас.
+
+6. Автоматичне завантаження БД при запуску ПЗ.
+	Функція void loadDatabase(vector<Employee> &database, string filename) приймає databse та filename,
+читає усі дані з filename циклом, записує їх у loadDataBase.
+					
+Відповідальний за реалізацію - Карпець Олександр.
+	
+//
+
+Також у процесі реалізації даних задач можна створювати підфункції та функції-інтерфейси для зручності.
+
+//
+
+Архітектура:
+Файли: 
+	struct_type_project_2.h - заголовковий файл, що містить опис структури Employee
+	prj_2_Karpets - результуюча програма.
+	ModulesKarpets.a/.h (Модулі розроблені Карпецем Олександром)
+	ModulesYarovets.a/.h (Модулі розроблені Яровецм Тарасом)
+	ModulesChepil.a/.h (Модулі розроблені Чепілем Вадимом)
+
+//
+
+Тип структури:
+	Однонапрямлений список
+
+//
+
+Опис структруи:
+#ifndef STRUCT_TYPE_PROJECT_2_H_INCLUDED
+#define STRUCT_TYPE_PROJECT_2_H_INCLUDED
+
+#include <iostream>
+
+using namespace std;
+
+struct date{
+    short day;
+    short month;
+    short year;
+};
+
+struct Employee {
+    date creationDate;
+    int regNum;
+    int ID;
+    char gender;
+    char typeOfWork;
+    string fullName;
+    date birthday;
+    string citizenship;
+    enum {basicSecondary, compSecondary, vocational,
+          incompHigher, basicHigher, higher} education[4];
+    string placeOfEducation[4];
+    string lastJobPlace;
+    string lastJob;
+    struct {
+        short days;
+        short months;
+        short years;
+    } workExp;
+    string placeOfLiving;
+    string passportInfo;
+    string additionalInfo;
+    date dateOfDissial;
+    string reasonForDissial;
+};
+
+#endif // STRUCT_TYPE_PROJECT_2_H_INCLUDED
+//
+
+План робіт:
+	Реалізація задач за нумерацією, від першочергової, до останньої:
+	6, 2, 1, 3, 4, 5. (6 - реалізовується першою, 6 - останньою).
+	Також у процесі реалізації даних задач можна створювати підфункції 
+	та функції-інтерфейси для зручності.
