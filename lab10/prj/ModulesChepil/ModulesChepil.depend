@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1712002632 source:d:\Університет\1 Курс\2 Семестр\Лабораторні з БМТП\chepil-vadym-ki23\lab09\prj\moduleschepil\main.cpp
+	<iostream>
+	<cmath>
+	<iomanip>
+	<string>
+	<bits/stdc++.h>
+
+1716019884 source:d:\С++\prj\moduleschepil\main.cpp
+	<iostream>
+	<cmath>
+	<iomanip>
+	<string>
+	<bits/stdc++.h>
+	<algorithm>
+	<fstream>
+
+1716021235 source:d:\Університет\1 Курс\2 Семестр\Лабораторні з БМТП\chepil-vadym-ki23\lab10\prj\moduleschepil\main.cpp
+	<iostream>
+	<cmath>
+	<iomanip>
+	<string>
+	<bits/stdc++.h>
+	<algorithm>
+	<fstream>
+
