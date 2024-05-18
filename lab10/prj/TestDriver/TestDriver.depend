@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1716039203 source:d:\Університет\1 Курс\2 Семестр\Лабораторні з БМТП\chepil-vadym-ki23\lab10\prj\testdriver\main.cpp
+	<iostream>
+	"ModulesChepil.h"
+	<fstream>
+
+1716020827 d:\Університет\1 Курс\2 Семестр\Лабораторні з БМТП\chepil-vadym-ki23\lab10\prj\moduleschepil.h
+
