@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1716291763 source:d:\Ñ++\lab12\prj\teacher\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<windows.h>
+	"ModulesChepil.h"
+
+1716289232 d:\Ñ++\lab12\prj\moduleschepil.h
+
+1716321172 source:d:\c++\lab12\prj\teacher\main.cpp
+	<iostream>
+	<Windows.h>
+	<fstream>
+	<sstream>
+	"ModulesChepil.h"
+
+1716322037 d:\c++\lab12\prj\moduleschepil.h
+
