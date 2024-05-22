@@ -5,8 +5,8 @@
 
 #include "ModulesChepil.h"
 
-#define TEST_SUITE_FILE "\\C++\\lab12\\TestSuite\\TestSuite.txt"
-#define TEST_RESULTS_FILE "\\C++\\lab12\\TestSuite\\TestResults.txt"
+#define TEST_SUITE_FILE "\\lab12\\TestSuite\\TestSuite.txt"
+#define TEST_RESULTS_FILE "\\lab12\\TestSuite\\TestResults.txt"
 
 using namespace std;
 
@@ -15,7 +15,7 @@ int main()
     system("chcp 65001 & cls");
 
     string currentFilePath = __FILE__;
-    int checkResult = currentFilePath.find("\\C++\\lab12\\prj\\");
+    int checkResult = currentFilePath.find("\\lab12\\prj\\");
     if (checkResult == -1) {
         for (int i = 0; i < 100; ++i) {
             Beep(500, 100);
